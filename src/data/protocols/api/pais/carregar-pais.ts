@@ -1,6 +1,6 @@
 import { CarregarPais } from "src/domain/usecases";
 
-export default interface CarregarPaisRepository {
+export interface CarregarPaisRepository {
   carregar: (parametros: CarregarPaisRepository.Parametros) => Promise<CarregarPaisRepository.Resultado>;
 }
 
