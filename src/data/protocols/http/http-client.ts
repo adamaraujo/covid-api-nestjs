@@ -3,7 +3,5 @@ export interface HttpClient {
 }
 
 export namespace HttpClient {
-  export type Parametros = {
-    url: string;
-  }
+  export type Parametros = string;
 }
