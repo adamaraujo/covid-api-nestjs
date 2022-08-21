@@ -1,7 +1,7 @@
 import { CarregarVacina } from "src/domain/usecases";
 
 export interface CarregarVacinaRepository {
-  carregar: (parametros: CarregarVacinaRepository.Parametros) => Promise<CarregarVacinaRepository.Resultado>;
+  carregar: (pais: CarregarVacinaRepository.Parametros) => Promise<CarregarVacinaRepository.Resultado>;
 }
 
 export namespace CarregarVacinaRepository {
