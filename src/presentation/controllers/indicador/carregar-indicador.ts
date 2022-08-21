@@ -1,5 +1,5 @@
 import { CarregarPais, CarregarVacina } from "src/domain/usecases";
-import { serverError } from "src/presentation/helpers";
+import { ok, serverError } from "src/presentation/helpers";
 import { Controller } from "src/presentation/protocols";
 
 export class CarregarIndicador implements Controller {
@@ -24,7 +24,7 @@ export class CarregarIndicador implements Controller {
         estados
       }
 
-      return indicador;
+      return ok(indicador);
 
     } catch (error) {
       return serverError(error);
