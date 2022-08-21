@@ -2,7 +2,7 @@ import { CarregarPais, CarregarVacina } from 'src/domain/usecases';
 import { ok, serverError } from 'src/presentation/helpers';
 import { Controller, HttpResponse } from 'src/presentation/protocols';
 
-export class CarregarIndicador implements Controller {
+export class CarregarIndicadorController implements Controller {
   constructor(
     private readonly carregarPais: CarregarPais,
     private readonly carregarVacina: CarregarVacina,
