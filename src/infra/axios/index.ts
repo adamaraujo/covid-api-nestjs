@@ -1,2 +1,2 @@
-export * from './axios.client'
-export * from './axios.repositories'
+export * from './axios.client';
+export * from './axios.repositories';

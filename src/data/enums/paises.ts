@@ -1,3 +1,3 @@
 export enum Paises {
-  Brazil = 'Brasil'
+  Brazil = 'Brasil',
 }

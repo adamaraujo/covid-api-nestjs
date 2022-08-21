@@ -1,18 +1,22 @@
-import { Inject } from "@nestjs/common";
-import { Paises } from "src/data/enums";
-import { CarregarPaisRepository } from "src/data/protocols";
-import Estado from "src/domain/models/estado";
-import { CarregarPais } from "src/domain/usecases";
-import { AxiosHttpClient, PAIS_REPOSITORY } from "src/infra/axios";
+import { Inject } from '@nestjs/common';
+import { Paises } from 'src/data/enums';
+import { CarregarPaisRepository } from 'src/data/protocols';
+import Estado from 'src/domain/models/estado';
+import { CarregarPais } from 'src/domain/usecases';
+import { AxiosHttpClient, PAIS_REPOSITORY } from 'src/infra/axios';
 
 export class PaisRepository implements CarregarPaisRepository {
   constructor(
     @Inject(PAIS_REPOSITORY)
-    private readonly axiosClient: AxiosHttpClient
-  ) { }
-  
-  async carregar(pais: CarregarPais.Parametros): Promise<CarregarPais.Resultado> {
-    const response = await this.axiosClient.get(`https://covid-api.mmediagroup.fr/v1/cases?country=${pais}`);
+    private readonly axiosClient: AxiosHttpClient,
+  ) {}
+
+  async carregar(
+    pais: CarregarPais.Parametros,
+  ): Promise<CarregarPais.Resultado> {
+    const response = await this.axiosClient.get(
+      `https://covid-api.mmediagroup.fr/v1/cases?country=${pais}`,
+    );
 
     const estados: Estado[] = [];
 

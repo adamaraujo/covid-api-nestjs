@@ -1,7 +1,9 @@
-import { CarregarPais } from "src/domain/usecases";
+import { CarregarPais } from 'src/domain/usecases';
 
 export interface CarregarPaisRepository {
-  carregar: (pais: CarregarPaisRepository.Parametros) => Promise<CarregarPaisRepository.Resultado>;
+  carregar: (
+    pais: CarregarPaisRepository.Parametros,
+  ) => Promise<CarregarPaisRepository.Resultado>;
 }
 
 export namespace CarregarPaisRepository {

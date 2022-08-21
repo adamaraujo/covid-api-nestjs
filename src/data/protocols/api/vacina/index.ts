@@ -1,1 +1,1 @@
-export * from './carregar-vacina'
+export * from './carregar-vacina';

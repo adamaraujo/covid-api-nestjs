@@ -1,7 +1,9 @@
-import Vacina from "src/domain/models/vacina";
+import Vacina from 'src/domain/models/vacina';
 
 export interface CarregarVacina {
-  carregar: (pais: CarregarVacina.Parametros) => Promise<CarregarVacina.Resultado>
+  carregar: (
+    pais: CarregarVacina.Parametros,
+  ) => Promise<CarregarVacina.Resultado>;
 }
 
 export namespace CarregarVacina {

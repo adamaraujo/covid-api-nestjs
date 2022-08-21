@@ -1,2 +1,2 @@
-export * from './pais'
-export * from './vacina'
+export * from './pais';
+export * from './vacina';

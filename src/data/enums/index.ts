@@ -1,1 +1,1 @@
-export * from './paises'
+export * from './paises';

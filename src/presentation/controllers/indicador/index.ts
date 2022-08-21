@@ -1,1 +1,1 @@
-export * from './carregar-indicador'
+export * from './carregar-indicador';

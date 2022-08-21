@@ -1,10 +1,10 @@
-import { ServerError } from "../errors";
-import { HttpResponse } from "../protocols";
+import { ServerError } from '../errors';
+import { HttpResponse } from '../protocols';
 
 export const serverError = (error: Error): HttpResponse => ({
   statusCode: 500,
-  body: new ServerError(error.stack)
-})
+  body: new ServerError(error.stack),
+});
 
 export const ok = (data: any): HttpResponse => ({
   statusCode: 200,

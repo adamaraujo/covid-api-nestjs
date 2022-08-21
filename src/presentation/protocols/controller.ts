@@ -1,5 +1,5 @@
-import { HttpResponse } from ".";
+import { HttpResponse } from '.';
 
 export interface Controller<T = any> {
-  lidar: (requisicao: T) => Promise<HttpResponse>
+  lidar: (requisicao: T) => Promise<HttpResponse>;
 }
