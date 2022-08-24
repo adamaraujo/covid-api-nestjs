@@ -1,6 +1,6 @@
 ## Descrição
 
-API de indicadores de casos e andamento da vacinação contra a COVID-19 no Brasil
+API com indicadores de casos e andamento da vacinação da COVID-19 no Brasil
 
 ## Ferramentas utilizadas
 
@@ -10,6 +10,13 @@ API de indicadores de casos e andamento da vacinação contra a COVID-19 no Bras
   <li>NestJS</li>
   <li>Swagger</li>
 </ul>
+
+## Pontos-chave da aplicação
+
+<ul>
+  <li>Desenvolvimento estruturado em práticas de Clean Architecture através de cinco camadas (domain, data, infra, main e presentation)</li>
+</ul>
+
 
 ## Requisitos
 
