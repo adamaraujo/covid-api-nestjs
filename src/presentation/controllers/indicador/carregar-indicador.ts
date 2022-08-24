@@ -1,6 +1,6 @@
 import { CarregarPais, CarregarVacina } from 'src/domain/usecases';
-import { ok, serverError } from 'src/presentation/helpers';
-import { Controller, HttpResponse } from 'src/presentation/protocols';
+import { serverError } from 'src/presentation/helpers';
+import { Controller } from 'src/presentation/protocols';
 
 export class CarregarIndicadorController implements Controller {
   constructor(
@@ -8,7 +8,7 @@ export class CarregarIndicadorController implements Controller {
     private readonly carregarVacina: CarregarVacina,
   ) {}
 
-  async lidar(): Promise<HttpResponse> {
+  async lidar(): Promise<any> {
     try {
       const PAIS = 'Brazil';
 
@@ -17,13 +17,13 @@ export class CarregarIndicadorController implements Controller {
 
       const indicador = {
         pais: {
-          pais,
-          vacina,
+          ...pais,
+          ...vacina,
         },
         estados,
       };
 
-      return ok(indicador);
+      return indicador;
     } catch (error) {
       return serverError(error);
     }
