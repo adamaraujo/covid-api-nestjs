@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
+import { IndicadorModule } from './controllers/indicador/indicador.module';
 
 @Module({
-  imports: [],
+  imports: [IndicadorModule],
 })
 export class AppModule {}
