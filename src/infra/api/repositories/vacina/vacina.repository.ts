@@ -16,10 +16,12 @@ export class VacinaRepository implements CarregarVacinaRepository {
       `https://covid-api.mmediagroup.fr/v1/vaccines?country=${pais}`,
     );
 
+    const { All } = response.data;
+
     const vacina = {
-      total_doses_aplicadas: response.administered,
-      pessoas_vacinadas: response.people_vaccinated,
-      pessoas_parcialmente_vacinadas: response.people_partially_vaccinated,
+      total_doses_aplicadas: All.administered,
+      pessoas_vacinadas: All.people_vaccinated,
+      pessoas_parcialmente_vacinadas: All.people_partially_vaccinated,
     };
 
     return vacina;
